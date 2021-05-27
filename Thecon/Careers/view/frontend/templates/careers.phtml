@@ -1,0 +1,100 @@
+<?php $domains = $block->getDomain();
+$cityy = $block->getCity();
+$typee = $block->getType();
+?>
+<div class="careers-filter">
+    <form action="<?= $block->getFormUrl(); ?>" method="POST">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <select name="departments" id="departments">
+                    <option value="">- <?php echo __('Department'); ?> -</option>
+                    <?php foreach ($domains as $domeniu) {?>
+                        <option value="<?= $domeniu ?>"><?= $domeniu ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select name="city" id="city">
+                    <option value="">- <?php echo __('Location'); ?> -</option>
+                    <?php foreach ($cityy as $city) {?>
+                        <option value="<?= $city ?>"><?= $city ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select name="type" id="type">
+                    <option value="">- <?php echo __('Job type'); ?> -</option>
+                    <?php foreach ($typee as $type) {?>
+                        <option value="<?= $type ?>"><?= $type ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="col-md-1">
+                <button type="submit" class="action" id="submit_filter"><span><?= $block->escapeHtml(__('Search')) ?></span></button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
+<div class="careers-header">
+    <div class="careers-message">
+        <p class="careers-maintitle"><?= __('BE OUR MATE!') ?></p>
+        <p class="careers-subtitle"><?= __('If you are looking for a job you can send your CV by email to XX@xyz.com. Good luck!') ?></p>
+    </div>
+</div>
+
+<div class="careers-list">
+    <?php $count = 0;?>
+	<?php foreach ($block->getPostCollection() as $key=>$post){?>
+        <?php if ($post->getStatus() == 1) {?>
+        <div class="career-item <?php if(($count % 3) == 1){ echo 'tablet-view';} elseif (($count % 3) == 2){echo 'desktop-view';}?>">
+            <?php $count++;?>
+            <div class="item">
+                <div class="career-title">
+        		    <span><?= $post->getJobName() ?></span>
+                </div>
+                <div class="career-content">
+                    <div class="career-first">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="career-type">
+                                    <i class="fas fa-file"></i> <span><?= __('Type:') ?> <?= $post->getJobType() ?></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="career-domain">
+                                    <i class="fas fa-book"></i> <span><?= __('Domain:') ?> <?= $post->getJobDomain() ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="career-second">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="career-city">
+                                    <i class="fas fa-map-marker-alt"></i> <span><?= __('City:') ?> <?= $post->getJobCity() ?></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="career-expiry">
+                                    <i class="far fa-clock"></i> <span><?= __('Expiry at:') ?> <?= substr($post->getJobExpiry(),0,11) ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="career-description">
+                        <span><?= mb_strimwidth($post->getJobShortDescription(),0,220,"...") ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="career-footer">
+                <div class="career-button">
+                    <a href="<?= $block->getPostUrl($post->getId())?>"><button class="career-btn"><?= __('See job') ?></button></a>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+    <?php } ?>
+</div>

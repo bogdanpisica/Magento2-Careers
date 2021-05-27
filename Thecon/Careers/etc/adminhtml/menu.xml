@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Thecon_Careers::manager" title="Thecon Careers" module="Thecon_Careers" sortOrder="10" resource="Thecon_Careers::manager" />
+
+        <add id="Thecon_Careers::manage_row" title="Manage careers" module="Thecon_Careers" sortOrder="20" parent="Thecon_Careers::manager" action="grid/grid" resource="Thecon_Careers::manage_row"/>
+        <add id="Thecon_Careers::add_row" title="Add new career" module="Thecon_Careers" sortOrder="20" parent="Thecon_Careers::manager" action="grid/grid/addrow" resource="Thecon_Careers::add_row"/>
+    </menu>
+</config>

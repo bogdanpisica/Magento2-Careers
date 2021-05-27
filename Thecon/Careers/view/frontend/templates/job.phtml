@@ -1,0 +1,32 @@
+<?php $job = $block->getCollection(); ?>
+
+<div class="job-return">
+    <i class="fas fa-arrow-left"></i> <a href="/careers/index/lists" class="job-link"><?= __('Return to jobs list') ?></a>
+</div>
+
+<div class="job-title">
+    <h1><?= $job['job_name'] ?></h1>
+</div>
+
+<div class="job-content">
+    <div class="job-details">
+        <table style="width:100%">
+            <tr>
+                <th><?= __('Type:') ?></th>
+                <th><?= __('Domain:') ?></th>
+                <th><?= __('City:') ?></th>
+                <th><?= __('Expiry at:') ?></th>
+            </tr>
+            <tr>
+                <td><?= $job['job_type'] ?></td>
+                <td><?= $job['job_domain'] ?></td>
+                <td><?= $job['job_city'] ?></td>
+                <td><?= substr($job['job_expiry'],0,11) ?></td>
+            </tr>
+        </table>
+    </div>
+    <div class="career-description">
+        <h2><?= __('Job description') ?></h2>
+        <span><?= $job['job_description'] ?></span>
+    </div>
+</div>

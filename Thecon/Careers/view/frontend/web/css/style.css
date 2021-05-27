@@ -1,0 +1,194 @@
+@media only screen and (max-width : 767px) {
+    .career-item {
+        width: 100%;
+        margin-right: 0;
+    }
+    .career-title {
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width: 991px) {
+    .career-item {
+        width: 45.6%;
+    }
+    .career-title {
+        height: 100px;
+    }
+    .career-expiry {
+        margin-left: 15px;
+    }
+}
+
+
+@media only screen and (min-width : 1200px) {
+    .career-item {
+        width: 31.6%;
+    }
+    .career-title {
+        height: 70px;
+    }
+    .career-item.desktop-view {
+        margin-right: 0;
+    }
+}
+
+.career-first, .career-second {
+    margin-bottom: 10px;
+}
+
+.career-item {
+    float: left;
+    box-shadow: 0px 2px 15px #0000001A;
+    border: 2px solid white;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.career-item:focus, .career-item:hover {
+    border: 2px solid #E40E20;
+}
+.career-item .item {
+    padding: 15px;
+}
+.career-title {
+    color: #231F20;
+    font-size: 26px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.career-type span, .career-domain span, .career-city span, .career-expiry span {
+    color: #888888;
+    font-size: 12px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.career-first i, .career-second i {
+    font-size: 17px;
+    color: #E40E20;
+    margin-right: 5px;
+}
+.career-expiry i {
+    margin-left: 6px;
+}
+.career-description span {
+    color: #9C9C9C;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.career-first, .career-second {
+    display: flex;
+}
+.career-content .col-md-12, .career-content .col-md-6 {
+    padding: 0;
+}
+.careers-message {
+    box-shadow: 0px 2px 15px #0000001a;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+}
+.careers-maintitle {
+    color: #E40E20;
+    font-size: 26px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.careers-subtitle {
+    color: #231f20;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+.career-footer {
+    background: #F8F8F8;
+    padding: 15px;
+    display: flex;
+}
+.career-button {
+    margin-left: auto;
+}
+button.career-btn {
+    background: white;
+    color: #231F20;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0px 2px 15px #0000001a;
+    border: 2px solid #DDDDDD;
+    text-transform: uppercase;
+}
+button.career-btn:hover, button.career-btn:focus {
+    background: #E40E20;
+    color: white;
+    box-shadow: 0px 2px 15px #0000001a;
+    border: 2px solid #E40E20;
+}
+.career-description {
+    margin-top: 20px;
+    word-break: break-all;
+}
+
+.careers-index-jobs table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.careers-index-jobs td, .careers-index-jobs th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 25%;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.careers-index-jobs td {
+    color: white;
+    background-color: #303030;
+}
+.job-title h1 {
+    color: #231F20;
+    font-size: 26px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.careers-index-jobs .career-description {
+    margin-top: 50px;
+}
+
+.career-description h2 {
+    color: #231F20;
+    font-size: 26px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.job-return i {
+    color: black;
+    font-size: 16px;
+}
+
+a.job-link {
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    color: #231F20 !important;
+}
+.job-return {
+    margin-bottom: 20px;
+}
+.career-content .col-md-12, .career-content .col-md-6 {
+    padding: 0;
+}
+.career-expiry {
+    margin-left: -7px;
+}

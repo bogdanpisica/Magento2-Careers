@@ -1,0 +1,24 @@
+{
+    "name": "thecon/module-careers",
+    "description": "This extension helps you create job offers on your site.",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Thecon",
+            "website": "https://thecon.ro",
+            "email": "support@thecon.ro",
+            "role" : "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Thecon\\Careers\\": ""
+        }
+    }
+}
